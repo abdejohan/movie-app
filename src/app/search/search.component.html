@@ -1,0 +1,11 @@
+<h2>Search for Movie</h2>
+<!-- The Search form -->
+<form class="example" action="">
+  <input [(ngModel)]="searchInput" type="text" placeholder="Search.." name="search">
+  <button (click)="getMovie(searchInput)" type="submit">SEARCH</button>
+</form>
+
+
+<div *ngIf="searchInput">
+  <p>{{searchInput}}</p>
+</div>
