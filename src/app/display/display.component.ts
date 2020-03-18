@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Movie } from '../movie';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { BackendService } from '../backend.service';
 
 
 
@@ -16,26 +17,31 @@ export class DisplayComponent implements OnInit {
 
   apiURL = 'https://api.themoviedb.org/3/movie/top_rated?api_key=9c8b1e24fdb5fd66ee5afc26bb9da380';
 
-  constructor(private httpclient: HttpClient) { }
+  movies: Movie[];
+
+  constructor(private httpclient: HttpClient, private backendservice: BackendService) { }
 
   ngOnInit(): void {
   }
 
 
+  // GETS TOP RATED MOVIES FROM API
   getTopRated() {
-    console.log('top rated');
+    this.backendservice.getTopRated().subscribe(data => this.movies = data.results);
+    // console.log(this.movies);
   }
 
+
+  // GETS UPCOMING MOVIES FROM API
   getUpcoming() {
-    console.log('upcoming');
+    this.backendservice.getUpcoming().subscribe(data => this.movies = data.results);
   }
 
 
-
+  // GETS MOST POPULAR MOVIES FROM API
   getPopular() {
-    console.log('popular');
+    this.backendservice.getPopular().subscribe(data => this.movies = data.results);
   }
-
 
 
 

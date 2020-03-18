@@ -5,4 +5,12 @@
     <li><button (click)="getUpcoming()">Upcoming</button></li>
     <li><button (click)="getPopular()">Popular</button></li>
   </ul>
+  
+  <div>
+    <ul>
+      <li *ngFor="let data of movies">
+        <a href="/{{data.id}}"> {{data.title | json}}</a>
+      </li>
+    </ul>
+  </div>
 </div>

@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../movie';
 import { Observable, of } from 'rxjs';
+import { BackendService } from '../backend.service';
+
+import { Injectable } from '@angular/core';
+import { catchError, map, tap } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-search',
@@ -11,15 +16,22 @@ export class SearchComponent implements OnInit {
 
   movie: Movie;
 
-  constructor() { }
+  searchInput;
+  public result = [];
+
+  constructor(private backendservice: BackendService) { }
 
   ngOnInit(): void {
   }
 
-  getMovie(searchInput) {
-    console.log(searchInput);
-    return searchInput;
+  searchMovie(searchInput: string) {
+    if (searchInput) {
+      searchInput = searchInput.replace(' ', '+');
+      this.backendservice.searchMovie(searchInput).subscribe(data => this.movie = data.results);
+      console.log(this.movie);
+    } else {
+      Message('requires valid input.');
+    }
   }
-
 
 }

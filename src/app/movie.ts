@@ -1,3 +1,3 @@
 export interface Movie {
-  page: number;
+  title: string;
 }
