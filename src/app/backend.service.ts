@@ -3,13 +3,15 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Movie } from './movie';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { MessageService } from './message.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class BackendService {
 
-  constructor(private httpclient: HttpClient) { }
+  constructor(private httpclient: HttpClient, private messageService: MessageService) { }
 
 
   // FUNCTIONS USED BY DISPLAY.COMPONENT.TS
@@ -34,6 +36,7 @@ export class BackendService {
   // FUNCTIONS USED BY SEARCH.COMPONENT.TS
   searchMovie(searchInput): Observable<Movie[]> {
     const searchURL = 'https://api.themoviedb.org/3/search/movie?api_key=9c8b1e24fdb5fd66ee5afc26bb9da380&query=';
+    this.messageService.add('Movie fetched successfully');
     return this.httpclient.get<Movie[]>(searchURL + searchInput);
   }
 

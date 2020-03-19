@@ -6,6 +6,7 @@ import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { DisplayComponent } from './display/display.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MessagesComponent } from './messages/messages.component';
 
 
 
@@ -13,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     SearchComponent,
-    DisplayComponent
+    DisplayComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

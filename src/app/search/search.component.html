@@ -5,7 +5,10 @@
   <button (click)="searchMovie(searchInput)" type="submit">SEARCH</button>
 </form>
 
-<div>
+
+<app-messages></app-messages>
+
+<div class="searchContent">
   <ul>
     <li *ngFor="let data of movie">
       <a href="/{{data.id}}">{{data.title | json}}</a>
