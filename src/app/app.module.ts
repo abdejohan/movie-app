@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { DisplayComponent } from './display/display.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MessagesComponent } from './messages/messages.component';
+import { ActorsearchComponent } from './actorsearch/actorsearch.component';
 
 
 
@@ -15,7 +16,8 @@ import { MessagesComponent } from './messages/messages.component';
     AppComponent,
     SearchComponent,
     DisplayComponent,
-    MessagesComponent
+    MessagesComponent,
+    ActorsearchComponent,
   ],
   imports: [
     BrowserModule,

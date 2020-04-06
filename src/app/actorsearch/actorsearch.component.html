@@ -1,0 +1,15 @@
+<form class="example" action="">
+  <input name="search" [(ngModel)]="searchInput" type="text" placeholder="Search for actor.." required>
+  <button (click)="searchActor(searchInput)" type="submit">SEARCH</button>
+</form>
+
+
+<app-messages></app-messages>
+
+<div class="searchContent">
+  <ul>
+    <li *ngFor="let data of person">
+      <a href="/{{data.id}}">{{data.name | json}}</a>
+    </li>
+  </ul>
+</div>

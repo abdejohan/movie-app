@@ -17,6 +17,7 @@ export class SearchComponent implements OnInit {
 
   movie: Movie;
   message: string;
+  person: any;
 
   searchInput;
   public result = [];
@@ -35,5 +36,6 @@ export class SearchComponent implements OnInit {
       this.messageService.add('Oh no, seems like there was an issue with the input. please try again');
     }
   }
+
 
 }

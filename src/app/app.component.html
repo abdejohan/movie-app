@@ -1,7 +1,7 @@
-<ngb-tabset [destroyOnHide]="false">
+<ngb-tabset>
 
   <!--TAB ONE -->
-  <ngb-tab title="Home">
+  <ngb-tab title="Search Movie">
     <ng-template ngbTabContent>
     <!--APP-SEARCH GENERATES THE SEARCH VIEW-->
     <app-search></app-search>
@@ -9,9 +9,18 @@
   </ngb-tab>
 
 
-
-
   <!--TAB TWO -->
+  <ngb-tab title="Search Actor">
+    <ng-template ngbTabContent>
+      <app-actorsearch></app-actorsearch>
+    </ng-template>
+  </ngb-tab>
+  
+  
+
+  
+  
+  <!--TAB THREE -->
   <ngb-tab>
     <ng-template ngbTabTitle><b>List</b> Movies</ng-template>
     <ng-template ngbTabContent>
@@ -23,10 +32,4 @@
 
 
 
-  <!--TAB THREE -->
-  <ngb-tab title="Coming Soon" [disabled]="true">
-    <ng-template ngbTabContent>
-      <!--CONTENT-->
-    </ng-template>
-  </ngb-tab>
 </ngb-tabset>

@@ -41,6 +41,13 @@ export class BackendService {
   }
 
 
+  // FUNCTIONS USED BY SEARCH.COMPONENT.TS
+  searchActor(searchInput): Observable<Movie[]> {
+    const searchActorURL = 'https://api.themoviedb.org/3/search/person?api_key=9c8b1e24fdb5fd66ee5afc26bb9da380&query=';
+    this.messageService.add('Movie fetched successfully');
+    return this.httpclient.get<Movie[]>(searchActorURL + searchInput);
+  }
+
 
 
 

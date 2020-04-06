@@ -1,9 +1,10 @@
 <h2>Search for Movie</h2>
 <!-- The Search form -->
 <form class="example" action="">
-  <input [(ngModel)]="searchInput" type="text" placeholder="Search.." name="search" required>
+  <input name="search" [(ngModel)]="searchInput" type="text" placeholder="Search for movie.." required>
   <button (click)="searchMovie(searchInput)" type="submit">SEARCH</button>
 </form>
+
 
 
 <app-messages></app-messages>
