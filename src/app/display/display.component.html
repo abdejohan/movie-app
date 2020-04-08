@@ -1,5 +1,5 @@
 <div>
-  <h2>Sort Movies after:</h2>
+  <h2>SORT AFTER</h2>
   <ul class="button-list">
     <li><button (click)="getTopRated()">Top Rated</button></li>
     <li><button (click)="getUpcoming()">Upcoming</button></li>
@@ -8,8 +8,8 @@
   
   <div>
     <ul>
-      <li *ngFor="let data of movie">
-        <a href="/{{data.id}}"> {{data.title | json}}</a>
+      <li *ngFor="let data of movie.results">
+        <a routerLink="/{{data.id}}">{{ data.title | json }}</a>
       </li>
     </ul>
   </div>

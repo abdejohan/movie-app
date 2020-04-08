@@ -7,21 +7,23 @@ import { MessageService } from '../message.service';
   templateUrl: './actorsearch.component.html',
   styleUrls: ['./actorsearch.component.css']
 })
-export class ActorsearchComponent implements OnInit {
 
+export class ActorsearchComponent implements OnInit {
   person: any;
 
-  constructor(private backendService: BackendService, private messageService: MessageService) { }
+  constructor(
+    private backendService: BackendService,
+    private messageService: MessageService
+    ) { }
 
   ngOnInit(): void {
   }
 
 
-  searchActor(searchInput: string) {
+  searchActor(searchInput: string): void {
     if (searchInput) {
       searchInput = searchInput.replace(' ', '+');
-      this.backendService.searchActor(searchInput).subscribe(data => this.person = data.results);
-      console.log(this.person);
+      this.backendService.searchActor(searchInput).subscribe(person => this.person = person);
     } else {
       this.messageService.add('Oh no, seems like there was an issue with the input. please try again');
     }

@@ -1,0 +1,15 @@
+<ngb-tabset>
+  <ngb-tab title="Actor Details">
+    <ng-template ngbTabContent>
+      <button (click)="goBack()" class="example back">Go Back</button>
+
+      <div class="searchContent">
+        this is the div
+        <ul>
+          <li>this is the list item</li>
+          <li> {{ details.original_title }} </li>
+        </ul>
+      </div>
+
+    </ng-template>
+  </ngb-tab>

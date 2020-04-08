@@ -33,19 +33,31 @@ export class BackendService {
   }
 
 
-  // FUNCTIONS USED BY SEARCH.COMPONENT.TS
+  // FUNCTION USED BY SEARCH.COMPONENT.TS
   searchMovie(searchInput): Observable<Movie[]> {
     const searchURL = 'https://api.themoviedb.org/3/search/movie?api_key=9c8b1e24fdb5fd66ee5afc26bb9da380&query=';
-    this.messageService.add('Movie fetched successfully');
+    // this.messageService.add('Movie fetched successfully');
     return this.httpclient.get<Movie[]>(searchURL + searchInput);
   }
 
 
-  // FUNCTIONS USED BY SEARCH.COMPONENT.TS
-  searchActor(searchInput): Observable<Movie[]> {
+  // FUNCTION USED BY ACTORSEARCH.COMPONENT.TS
+  searchActor(searchInput: string): Observable<Movie[]> {
     const searchActorURL = 'https://api.themoviedb.org/3/search/person?api_key=9c8b1e24fdb5fd66ee5afc26bb9da380&query=';
-    this.messageService.add('Movie fetched successfully');
+    // this.messageService.add('Movie fetched successfully');
     return this.httpclient.get<Movie[]>(searchActorURL + searchInput);
+  }
+
+  searchMovieId(id): Observable<Movie[]> {
+    const searchMovieId = 'https://api.themoviedb.org/3/movie/' + id + '?api_key=9c8b1e24fdb5fd66ee5afc26bb9da380&language=en-US';
+    console.log(this.httpclient.get<Movie[]>(searchMovieId));
+    console.log('hej');
+    return this.httpclient.get<Movie[]>(searchMovieId);
+  }
+
+  searchActorId(id): Observable<Movie[]> {
+    const searchActorId = 'https://api.themoviedb.org/3/person/' + id + '?api_key=9c8b1e24fdb5fd66ee5afc26bb9da380&language=en-US';
+    return this.httpclient.get<Movie[]>(searchActorId);
   }
 
 

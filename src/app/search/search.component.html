@@ -1,18 +1,65 @@
-<h2>Search for Movie</h2>
-<!-- The Search form -->
-<form class="example" action="">
-  <input name="search" [(ngModel)]="searchInput" type="text" placeholder="Search for movie.." required>
-  <button (click)="searchMovie(searchInput)" type="submit">SEARCH</button>
-</form>
 
 
 
-<app-messages></app-messages>
+<ngb-tabset>
 
-<div class="searchContent">
-  <ul>
-    <li *ngFor="let data of movie">
-      <a href="/{{data.id}}">{{data.title | json}}</a>
-    </li>
-  </ul>
-</div>
+  <!--TAB ONE -->
+  <ngb-tab title="Search Movie">
+    <ng-template ngbTabContent>
+
+      <h2>MOVIE ARCHIVES</h2>
+      <p>
+        <span>Welcome!</span>
+        Here you can search for all of your favorite movies and actors.
+        Enjoy!
+      </p>
+      <!-- The Search form -->
+      <form class="example" action="">
+        <input name="search" [(ngModel)]="searchInput" type="text" placeholder="Search for movie.." required>
+        <button (click)="searchMovie(searchInput)" type="submit">SEARCH</button>
+      </form>
+
+      <div class="searchContent">
+        <ul>
+          <li *ngFor="let data of movie.results">
+            <a routerLink="/{{data.id}}">{{data.title | json}}</a>
+          </li>
+        </ul>
+      </div>
+    </ng-template>
+  </ngb-tab>
+
+
+
+
+
+
+
+
+
+  <!--TAB TWO -->
+  <ngb-tab title="Search Actor">
+    <ng-template ngbTabContent>
+      <app-actorsearch></app-actorsearch>
+    </ng-template>
+  </ngb-tab>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <!--TAB THREE -->
+  <ngb-tab title="List Movies">
+    <ng-template ngbTabContent>
+      <app-display></app-display>
+    </ng-template>
+  </ngb-tab>
+
+</ngb-tabset>
