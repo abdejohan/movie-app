@@ -21,7 +21,7 @@
 
       <div class="searchContent">
         <ul>
-          <li *ngFor="let data of movie.results">
+          <li *ngFor="let data of movie">
             <a routerLink="/{{data.id}}">{{data.title | json}}</a>
           </li>
         </ul>
