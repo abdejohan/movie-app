@@ -9,7 +9,7 @@
 
 
 <div class="searchContent">
-  <ul *ngFor="let data of person.results">
+  <ul *ngFor="let data of person">
     <li *ngIf="data.name">
       <a routerLink="person/{{data.id}}">{{ data.name | json }}</a>
     </li>

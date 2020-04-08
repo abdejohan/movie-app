@@ -23,7 +23,7 @@ export class ActorsearchComponent implements OnInit {
   searchActor(searchInput: string): void {
     if (searchInput) {
       searchInput = searchInput.replace(' ', '+');
-      this.backendService.searchActor(searchInput).subscribe(person => this.person = person);
+      this.backendService.searchActor(searchInput).subscribe(person => this.person = person.results);
     } else {
       this.messageService.add('Oh no, seems like there was an issue with the input. please try again');
     }
