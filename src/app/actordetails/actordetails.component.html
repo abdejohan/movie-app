@@ -4,10 +4,11 @@
       <button (click)="goBack()" class="example back">Go Back</button>
 
       <div class="searchContent">
-        this is the div
-        <ul>
-          <li>this is the list item</li>
-          <li> {{ details.original_title }} </li>
+        <ul *ngIf="person">
+          <li><span>Name:</span> {{ person.name }} </li>
+          <li><span>Biography:</span> {{ person.biography }} </li>
+          <li><span>Born In:</span> {{ person.place_of_birth }} </li>
+          
         </ul>
       </div>
 

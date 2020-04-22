@@ -23,7 +23,7 @@ export class DisplayComponent implements OnInit {
 
   // GETS TOP RATED MOVIES FROM API
   getTopRated() {
-    this.backendservice.getTopRated().subscribe(data => this.movie = data);
+    this.backendservice.getTopRated().subscribe(data => this.movie = data.results);
     console.log(this.movie);
 
   }
@@ -31,13 +31,13 @@ export class DisplayComponent implements OnInit {
 
   // GETS UPCOMING MOVIES FROM API
   getUpcoming() {
-    this.backendservice.getUpcoming().subscribe(data => this.movie = data);
+    this.backendservice.getUpcoming().subscribe(data => this.movie = data.results);
   }
 
 
   // GETS MOST POPULAR MOVIES FROM API
   getPopular() {
-    this.backendservice.getPopular().subscribe(data => this.movie = data);
+    this.backendservice.getPopular().subscribe(data => this.movie = data.results);
   }
 
 

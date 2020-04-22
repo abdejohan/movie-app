@@ -12,6 +12,7 @@ import { MessageService } from './message.service';
 export class BackendService {
 
   constructor(private httpclient: HttpClient, private messageService: MessageService) { }
+  person: any;
 
 
   // FUNCTIONS USED BY DISPLAY.COMPONENT.TS
@@ -49,15 +50,13 @@ export class BackendService {
   }
 
   searchMovieId(id): Observable<Movie[]> {
-    const searchMovieId = 'https://api.themoviedb.org/3/movie/' + id + '?api_key=9c8b1e24fdb5fd66ee5afc26bb9da380&language=en-US';
-    console.log(this.httpclient.get<Movie[]>(searchMovieId));
-    console.log('hej');
-    return this.httpclient.get<Movie[]>(searchMovieId);
+    const movieIdURL = 'https://api.themoviedb.org/3/movie/' + id + '?api_key=9c8b1e24fdb5fd66ee5afc26bb9da380&language=en-US';
+    return this.httpclient.get<Movie[]>(movieIdURL);
   }
 
   searchActorId(id): Observable<Movie[]> {
-    const searchActorId = 'https://api.themoviedb.org/3/person/' + id + '?api_key=9c8b1e24fdb5fd66ee5afc26bb9da380&language=en-US';
-    return this.httpclient.get<Movie[]>(searchActorId);
+    const ApiActorId = 'https://api.themoviedb.org/3/person/' + id + '?api_key=9c8b1e24fdb5fd66ee5afc26bb9da380&language=en-US';
+    return this.httpclient.get<Movie[]>(ApiActorId);
   }
 
 

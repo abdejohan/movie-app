@@ -13,7 +13,7 @@ import { Movie } from '../movie';
 
 
 export class DetailsComponent implements OnInit {
-  movie: any;
+  movie: Movie[];
 
   constructor(
     private route: ActivatedRoute,
@@ -21,7 +21,8 @@ export class DetailsComponent implements OnInit {
     private location: Location
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.searchMovieId();
   }
 
   searchMovieId() {

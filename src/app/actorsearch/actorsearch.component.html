@@ -3,15 +3,15 @@
   Search for movie actors here :)
 </p>
 <form class="example" action="">
-  <input name="search" [(ngModel)]="searchInput" type="text" placeholder="Search for actor.." required>
+  <input name="search" [(ngModel)]="searchInput" type="text" placeholder="Search Actor.." required>
   <button (click)="searchActor(searchInput)" type="submit">SEARCH</button>
 </form>
 
 
 <div class="searchContent">
-  <ul *ngFor="let data of person">
-    <li *ngIf="data.name">
-      <a routerLink="person/{{data.id}}">{{ data.name | json }}</a>
+  <ul>
+    <li *ngFor="let data of person">
+      <a routerLink="person/{{data.id}}">{{ data.name }}</a>
     </li>
   </ul>
 </div>

@@ -15,14 +15,14 @@
       </p>
       <!-- The Search form -->
       <form class="example" action="">
-        <input name="search" [(ngModel)]="searchInput" type="text" placeholder="Search for movie.." required>
+        <input name="search" [(ngModel)]="searchInput" type="text" placeholder="Search Movie.." required>
         <button (click)="searchMovie(searchInput)" type="submit">SEARCH</button>
       </form>
 
       <div class="searchContent">
         <ul>
           <li *ngFor="let data of movie">
-            <a routerLink="/{{data.id}}">{{data.title | json}}</a>
+            <a routerLink="/{{data.id}}">{{ data.title }}</a>
           </li>
         </ul>
       </div>

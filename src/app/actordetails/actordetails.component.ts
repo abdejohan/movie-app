@@ -19,7 +19,8 @@ export class ActordetailsComponent implements OnInit {
     private location: Location
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.searchActorId();
   }
 
   searchActorId() {

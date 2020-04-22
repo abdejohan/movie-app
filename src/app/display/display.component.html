@@ -1,5 +1,6 @@
 <div>
   <h2>SORT AFTER</h2>
+  <p>Here you got a few options of displying movies if you're not looking for anyone specific!</p>
   <ul class="button-list">
     <li><button (click)="getTopRated()">Top Rated</button></li>
     <li><button (click)="getUpcoming()">Upcoming</button></li>
@@ -9,7 +10,7 @@
   <div>
     <ul>
       <li *ngFor="let data of movie">
-        <a routerLink="/{{data.id}}">{{ data.title | json }}</a>
+        <a routerLink="/{{data.id}}">{{ data.title }}</a>
       </li>
     </ul>
   </div>

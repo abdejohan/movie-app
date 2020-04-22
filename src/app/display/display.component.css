@@ -9,3 +9,7 @@
 button {
   white-space: nowrap;
 }
+
+li {
+  margin-left: 5px;
+}
