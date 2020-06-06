@@ -10,6 +10,7 @@ import { MessageService } from '../message.service';
 
 export class ActorsearchComponent implements OnInit {
   person: any;
+  searchInput: any;
 
   constructor(
     private backendService: BackendService,
@@ -23,7 +24,7 @@ export class ActorsearchComponent implements OnInit {
   searchActor(searchInput: string): void {
     if (searchInput) {
       searchInput = searchInput.replace(' ', '+');
-      this.backendService.searchActor(searchInput).subscribe(person => this.person = person.results);
+      this.backendService.searchActor(searchInput).subscribe(person => this.person = person);
     } else {
       this.messageService.add('Oh no, seems like there was an issue with the input. please try again');
     }

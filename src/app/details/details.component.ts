@@ -13,7 +13,7 @@ import { Movie } from '../movie';
 
 
 export class DetailsComponent implements OnInit {
-  movie: Movie[];
+  movie: any;
 
   constructor(
     private route: ActivatedRoute,

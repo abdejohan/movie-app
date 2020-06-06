@@ -8,8 +8,8 @@
   </ul>
   
   <div>
-    <ul>
-      <li *ngFor="let data of movie">
+    <ul *ngIf="movie">
+      <li *ngFor="let data of movie.results">
         <a routerLink="/{{data.id}}">{{ data.title }}</a>
       </li>
     </ul>

@@ -9,8 +9,8 @@
 
 
 <div class="searchContent">
-  <ul>
-    <li *ngFor="let data of person">
+  <ul *ngIf="person">
+    <li *ngFor="let data of person.results">
       <a routerLink="person/{{data.id}}">{{ data.name }}</a>
     </li>
   </ul>
