@@ -5,10 +5,12 @@
 
       <div class="searchContent">
         <ul *ngIf="movie">
-          <li><span>Title:</span> {{ movie.original_title }} </li>
-          <li><span>Genre:</span> {{ movie.genres.name }} </li>
-          <li><span>Tagline:</span> {{ movie.tagline }} </li>
-          <li><span>Overview:</span> {{ movie.overview }} </li>
+          <li><span class="title">{{ movie.original_title }}</span></li>
+          <li><img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="movie_poster"></li>
+          <li><span>Genre</span></li>
+          <li *ngFor="let res of movie.genres"> {{ res.name }} </li>
+          <li><span>Overview</span></li>
+          <li>{{ movie.overview }} </li>
         </ul>
       </div>
 
