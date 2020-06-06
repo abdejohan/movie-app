@@ -73,3 +73,7 @@ form.example::after {
 p {
   max-width: 380px;
 }
+
+.title {
+  font-size: 50px;
+}
