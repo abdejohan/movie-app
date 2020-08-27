@@ -1,1 +1,19 @@
-<p>actor works!</p>
+<div>
+  <h2>ACTORS ARCHIVE</h2>
+  <p>
+    Search for movie actors here :)
+  </p>
+  <form class="example" action="">
+    <input name="search" [(ngModel)]="searchInput" type="text" placeholder="Search Actor.." required>
+    <button (click)="searchActor(searchInput)" type="submit">SEARCH</button>
+  </form>
+
+
+  <div class="searchContent">
+    <ul *ngIf="person">
+      <li *ngFor="let data of person.results">
+        <a routerLink="person/{{data.id}}">{{ data.name }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
