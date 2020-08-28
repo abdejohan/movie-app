@@ -1,1 +1,7 @@
-<p>category works!</p>
+  <div>
+    <ul *ngIf="movieCategory">
+      <li *ngFor="let data of movieCategory.results">
+        <a routerLink="/{{data.id}}">{{ data.title }}</a>
+      </li>
+    </ul>
+  </div>

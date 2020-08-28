@@ -3,8 +3,8 @@
     <li><a routerLink="">Front Page</a></li>
     <li><a routerLink="movie">Movie</a></li>
     <li><a routerLink="actor">Actor</a></li>
-    <li><a routerLink="toprated" (click)="getTopRated()">Top Rated</a></li>
-    <li><a routerLink="popular" (click)="getPopular()">popular</a></li>
-    <li><a routerLink="upcoming" (click)="getUpcoming()">Upcoming</a></li>
+    <li><a [routerLink] = "['category', 'top-rated']">Top Rated</a></li>
+    <li><a [routerLink] = "['category', 'popular']">popular</a></li>
+    <li><a [routerLink] = "['category', 'upcoming']">Upcoming</a></li>
   </ul>
 </nav>

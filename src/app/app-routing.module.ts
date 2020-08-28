@@ -10,9 +10,9 @@ const routes: Routes = [
   { path: '', component: FrontpageComponent },
   { path: 'movie', component: MovieComponent },
   { path: 'actor', component: ActorComponent },
-  { path: 'upcoming', component: CategoryComponent },
-  { path: 'toprated', component: CategoryComponent },
-  { path: 'popular', component: CategoryComponent },
+  { path: 'category/:category', component: CategoryComponent },
+  { path: 'category/:category', component: CategoryComponent },
+  { path: 'category/:category', component: CategoryComponent }
 ];
 
 @NgModule({

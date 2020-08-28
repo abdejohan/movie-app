@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BackendService } from '../backend.service';
 import { HttpClient } from '@angular/common/http';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
 
 
 @Component({
@@ -9,11 +11,37 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent implements OnInit {
-  public movie: any;
+  public movieCategory: any;
+  public path: any;
 
-  constructor(private httpclient: HttpClient, private backendservice: BackendService) { }
+  constructor(
+    private httpclient: HttpClient,
+    private route: ActivatedRoute,
+    private backendservice: BackendService
+  ) { }
 
   ngOnInit(): void {
+    this.fetchApiData();
   }
+  
+  
+  
+  fetchApiData() {
+    this.route.params.subscribe(params => { this.path = params.category; });
+    console.log(this.path);
+    if (this.path === 'top-rated') {
+      this.backendservice.getTopRated().subscribe(res => this.movieCategory = res);
+    } else if (this.path === 'upcoming') {
+      this.backendservice.getUpcoming().subscribe(res => this.movieCategory = res);
+    } else if (this.path === 'popular') {
+      this.backendservice.getPopular().subscribe(res => this.movieCategory = res);
+    }
+  }
+
+
+
+
+
+
 
 }
