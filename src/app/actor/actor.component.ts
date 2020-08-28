@@ -3,12 +3,12 @@ import { BackendService } from '../backend.service';
 import { MessageService } from '../message.service';
 
 @Component({
-  selector: 'app-actorsearch',
-  templateUrl: './actorsearch.component.html',
-  styleUrls: ['./actorsearch.component.css']
+  selector: 'app-actor',
+  templateUrl: './actor.component.html',
+  styleUrls: ['./actor.component.css']
 })
 
-export class ActorsearchComponent implements OnInit {
+export class ActorComponent implements OnInit {
   person: any;
   searchInput: any;
 
