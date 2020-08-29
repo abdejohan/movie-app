@@ -13,6 +13,8 @@ import { Location } from '@angular/common';
 export class DisplayComponent implements OnInit {
   movie: any;
   actors: any;
+  person: any;
+  path: any;
 
   constructor(
     private backendservice: BackendService,
@@ -23,19 +25,17 @@ export class DisplayComponent implements OnInit {
 
   ngOnInit(): void {
     this.searchMovieId();
-  }
+    }
 
 
   searchMovieId() {
+    this.route.params.subscribe(params => { this.path = params.response; });
+    console.log(this.path);
     const objKey = 'cast';
     const id = this.route.snapshot.paramMap.get('id');
     this.backendservice.searchMovieId(id).subscribe(details => this.movie = details);
     this.backendservice.searchCast(id).subscribe(details => this.actors = details[objKey].slice(0, 6));
   }
-
-
-
-
 
 
   goBack() {

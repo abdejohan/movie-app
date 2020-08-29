@@ -5,15 +5,6 @@
   </p>
   <form class="example" action="">
     <input name="search" [(ngModel)]="searchInput" type="text" placeholder="Search Actor.." required>
-    <button (click)="searchActor(searchInput)" type="submit">SEARCH</button>
+    <a [routerLink]="['/actor', searchInput]" type="submit">SEARCH</a>
   </form>
-
-
-  <div class="searchContent">
-    <ul *ngIf="person">
-      <li *ngFor="let data of person.results">
-        <a routerLink="person/{{data.id}}">{{ data.name }}</a>
-      </li>
-    </ul>
-  </div>
 </div>

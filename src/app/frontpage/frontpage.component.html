@@ -1,21 +1,14 @@
 <div>
   <h2>MOVIES ARCHIVE</h2>
-      <p>
-        <span>Welcome!</span>
-        Here you can search for all of your favorite movies..
-        Enjoy!
-      </p>
-      <!-- The Search form -->
-      <form class="example" action="">
-        <input name="search" [(ngModel)]="searchInput" type="text" placeholder="Search Movie.." required>
-        <button (click)="searchMovie(searchInput)" type="submit">SEARCH</button>
-      </form>
+  <p>
+    <span>Welcome!</span>
+    Here you can search for all of your favorite movies..
+    Enjoy!
+  </p>
+  <!-- The Search form -->
+  <form class="example" action="">
+    <input name="search" [(ngModel)]="searchInput" type="text" placeholder="Search Movie.." required>
+    <a [routerLink]="['/movie', searchInput]" type="submit">SEARCH</a>
+  </form>
     
-      <div class="searchContent">
-        <ul *ngIf="movie">
-          <li *ngFor="let data of movie.results">
-            <a routerLink="/{{data.id}}">{{ data.title }}</a>
-          </li>
-        </ul>
-      </div>
 </div>
