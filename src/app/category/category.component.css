@@ -1,0 +1,27 @@
+div {
+  padding-left: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  max-width: 1000px;
+  
+}
+
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  list-style-type: none;
+}
+
+ul > li {
+  padding: 2px 0px;
+}
+
+
+ul > li > a {
+  text-decoration: none;
+}

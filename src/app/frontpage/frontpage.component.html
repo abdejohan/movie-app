@@ -8,7 +8,7 @@
   <!-- The Search form -->
   <form class="example" action="">
     <input name="search" [(ngModel)]="searchInput" type="text" placeholder="Search Movie.." required>
-    <a [routerLink]="['/movie', searchInput]" type="submit">SEARCH</a>
+    <button [routerLink]="['/movie', searchInput]" type="button">SEARCH</button>
   </form>
     
 </div>

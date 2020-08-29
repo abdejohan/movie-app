@@ -1,0 +1,26 @@
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+
+}
+
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  list-style-type: none;
+}
+
+ul > li {
+  padding: 10px;
+  margin: 0px 5px;
+}
+
+
+ul > li > a {
+  text-decoration: none;
+}

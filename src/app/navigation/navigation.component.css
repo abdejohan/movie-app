@@ -1,0 +1,29 @@
+nav {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black;
+}
+
+ul {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  list-style-type: none;
+}
+
+ul > li {
+  padding: 10px;
+  margin: 0px 5px;
+}
+
+
+ul > li > a {
+  text-decoration: none;
+}
