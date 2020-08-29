@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { BackendService } from '../backend.service';
 import { MessageService } from '../message.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Location } from '@angular/common';
+
 
 
 @Component({
@@ -19,6 +21,8 @@ export class ResponseComponent implements OnInit {
     private backendservice: BackendService,
     private messageservice: MessageService,
     private route: ActivatedRoute,
+    private location: Location
+
   ) { }
 
   ngOnInit(): void {
@@ -52,4 +56,10 @@ export class ResponseComponent implements OnInit {
       this.messageservice.add('Oh no, seems like there was an issue with the input. please try again');
     }
   }
+
+  goBack() {
+    this.location.back();
+  }
+
+
 }
