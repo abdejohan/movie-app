@@ -1,0 +1,18 @@
+<button (click)="goBack()" class="example back">Go Back</button>
+
+
+<div class="searchContent">
+  <ul class="content-ul" *ngIf="movie">
+    <li><span class="title">{{ movie.original_title }}</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="movie_poster"></li>
+
+    <li><span class="title">Actors</span></li>
+    <li *ngFor="let res of actors"> {{ res.name }} </li>
+    
+    <li><span class="title">Genre</span></li>
+    <li *ngFor="let res of movie.genres"> {{ movie.name }} </li>
+    
+    <li><span class="title">Overview</span></li>
+    <li>{{ movie.overview }} </li>
+  </ul>
+</div>

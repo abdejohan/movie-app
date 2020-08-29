@@ -23,9 +23,7 @@ export class CategoryComponent implements OnInit {
   ngOnInit(): void {
     this.fetchApiData();
   }
-  
-  
-  
+
   fetchApiData() {
     this.route.params.subscribe(params => { this.path = params.category; });
     console.log(this.path);

@@ -10,6 +10,7 @@ import { ActorComponent } from './actor/actor.component';
 import { CategoryComponent } from './category/category.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent } from './navigation/navigation.component';
+import { DisplayComponent } from './display/display.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     MovieComponent,
     ActorComponent,
     CategoryComponent,
-    NavigationComponent
+    NavigationComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,
