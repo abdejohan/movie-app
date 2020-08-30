@@ -1,6 +1,13 @@
 * {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.container {
   display: flex;
   justify-content: center;
-  flex-flow: column nowrap;
   align-items: center;
+  flex-flow: column nowrap;
 }
