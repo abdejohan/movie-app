@@ -1,5 +1,10 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
 div {
-  padding-left: 30%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -15,6 +20,8 @@ ul {
   align-items: flex-start;
   flex-flow: column wrap;
   list-style-type: none;
+  width: 400px;
+  
 }
 
 ul > li {

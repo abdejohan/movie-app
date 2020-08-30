@@ -1,19 +1,21 @@
-<button (click)="goBack()" class="example back">Go Back</button>
 
 
+<div class="container">
+  <button (click)="goBack()" class="example back">Go Back</button>
 
-<div class="searchContent">
-  <ul *ngIf="movie">
-    <li *ngFor="let data of movie.results">
-      <a routerLink="/{{data.id}}">{{ data.title }}</a>
-    </li>
-  </ul>
-</div>
-
-<div class="searchContent">
-  <ul *ngIf="person">
-    <li *ngFor="let data of person.results">
-      <a routerLink="person/{{data.id}}">{{ data.name }}</a>
-    </li>
-  </ul>
+  <div class="searchContent">
+    <ul *ngIf="movie">
+      <li *ngFor="let data of movie.results">
+        <a routerLink="/{{data.id}}">{{ data.title }}</a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="searchContent">
+    <ul *ngIf="person">
+      <li *ngFor="let data of person.results">
+        <a routerLink="person/{{data.id}}">{{ data.name }}</a>
+      </li>
+    </ul>
+  </div>
 </div>
