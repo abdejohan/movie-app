@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'c2/:category', component: CategoryComponent },
   { path: 'c3/:category', component: CategoryComponent },
   { path: ':id', component: DisplayComponent },
+  { path: 'person/:id', component: DisplayComponent },
   { path: 'actor/:actor', component: ResponseComponent },
   { path: 'movie/:movie', component: ResponseComponent }
 ];

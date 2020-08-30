@@ -15,4 +15,15 @@
     <li><span class="title">Overview</span></li>
     <li>{{ movie.overview }} </li>
   </ul>
+
+  <div class="searchContent">
+    <ul *ngIf="person">
+      <li><span class="title">{{ person.name }} </span></li>
+      <li><img src="https://image.tmdb.org/t/p/w300{{person.profile_path}}" alt="actor_poster"></li>
+      <li><span>Biography</span></li>
+      <li> {{ person.biography }} </li>
+      <li><span>Born In</span></li>
+      <li> {{ person.place_of_birth }} </li>
+    </ul>
+  </div>
 </div>

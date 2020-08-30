@@ -14,7 +14,7 @@
   <div class="searchContent">
     <ul *ngIf="person">
       <li *ngFor="let data of person.results">
-        <a routerLink="person/{{data.id}}">{{ data.name }}</a>
+        <a routerLink="/person/{{data.id}}">{{ data.name }}</a>
       </li>
     </ul>
   </div>
