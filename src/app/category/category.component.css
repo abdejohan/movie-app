@@ -9,7 +9,6 @@ div {
   justify-content: center;
   align-items: flex-start;
   flex-flow: column wrap;
-  max-width: 1000px;
   
 }
 
