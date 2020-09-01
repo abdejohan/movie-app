@@ -13,7 +13,7 @@ nav {
   margin-bottom: 20px;
   max-width: 600px;
   min-width: 400px;
-  border: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 ul {
@@ -31,7 +31,7 @@ ul > li > a {
 }
 
 .red {
-  background-color: red;
+  background-color: #B4EDD2;
 }
 
 
@@ -47,7 +47,7 @@ ul > li > a {
 }
 
 .blue {
-  background-color: blue;
+  background-color: #A0CFD3;
 }
 
 
@@ -59,4 +59,19 @@ ul > li > a {
 
 .container-div {
   padding: 0.5em 0px;
+}
+
+.title-text {
+  display: block;
+  font-weight: bolder;
+  width: 100%;
+}
+
+.title-link {
+  font-size: 1.5em;
+}
+
+.mini-header {
+  background-color: #9A7AA0;
+  width: 100%;
 }
