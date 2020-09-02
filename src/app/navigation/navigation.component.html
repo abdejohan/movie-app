@@ -1,13 +1,20 @@
-<nav>
-  <h2 class="mini-header">Im looking for a:</h2>
-  <ul class="nav-list">
-    <li class="red movie-actor-option"><a routerLink="" class="title-link">Movies</a></li>
-    <li class="blue movie-actor-option"><a routerLink="actor" class="title-link">Actors</a></li>
-  </ul>
-  <ul class="container-div">
-    <li><span class="title-text">Top Movie Categories:</span></li>
-    <li><a [routerLink] = "['c1', 'top-rated']">Top Rated</a></li>
-    <li><a [routerLink] = "['c2', 'popular']">Popular</a></li>
-    <li><a [routerLink] = "['c3', 'upcoming']">Upcoming</a></li>
-  </ul>
-</nav>
+<header>
+  <nav>
+    <ul>
+      <li><span class="title-text">Top Movie Categories:</span></li>
+      <li><a class="cat" [routerLink] = "['c1', 'top-rated']">Top Rated</a></li>
+      <li><a class="cat" [routerLink] = "['c2', 'popular']">Popular</a></li>
+      <li><a class="cat" [routerLink] = "['c3', 'upcoming']">Upcoming</a></li>
+    </ul>
+  </nav>
+  <section class="searchBox">
+   <h2><span class="title-text search">Search for:</span></h2>
+    <div>
+      <ul>
+        <li><a class="cat" routerLink="">Movies</a></li>
+        <li><span class="slash">/</span></li>
+        <li><a class="cat" routerLink="actor">Actors</a></li>
+      </ul>
+    </div>
+  </section>
+</header>
