@@ -46,3 +46,10 @@ footer > ul > li {
 }
 
 
+
+@media (max-width: 600px) {
+  .center {
+    width: 100%;
+  }
+}
+

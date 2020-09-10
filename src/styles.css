@@ -6,9 +6,13 @@
   margin: 0px;
 }
 
+body {
+  width: 100%;
+}
+
 
 .back-button {
-  width: 300px;
+  width: 80%;
   height: 40px;
   background-color: #7D5BA6;
 }
