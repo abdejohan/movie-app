@@ -1,11 +1,10 @@
 <div class="container">
-  <button (click)="goBack()" class="example back">Go Back</button>
-
+  
   <div class="searchContent">
     <ul class="content-ul" *ngIf="movie">
-      <li><span class="title">{{ movie.original_title }}</span></li>
-      <li><img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="movie_poster"></li>
-
+      <li><span class="main-title title">{{ movie.original_title }}</span></li>
+      <li class="img-li"><img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="movie_poster"></li>
+      
       <li><span class="title">Actors</span></li>
       <ul class="container-list">
         <li *ngFor="let res of actors" class="container-list-item">{{ res.name }}</li>
@@ -19,11 +18,11 @@
       <li><span class="title">Overview</span></li>
       <li><p>{{ movie.overview }}</p></li>
     </ul>
-
+    
     <div class="searchContent">
       <ul class="content-ul" *ngIf="person">
-        <li><span class="title">{{ person.name }} </span></li>
-        <li><img src="https://image.tmdb.org/t/p/w300{{person.profile_path}}" alt="actor_poster"></li>
+        <li><span class="main-title title">{{ person.name }} </span></li>
+        <li class="img-li"><img src="https://image.tmdb.org/t/p/w300{{person.profile_path}}" alt="actor_poster"></li>
         <li><span class="title">Biography</span></li>
         <li><p> {{ person.biography }} </p></li>
         <li><span class="title">Born In</span></li>
@@ -31,4 +30,5 @@
       </ul>
     </div>
   </div>
+  <button (click)="goBack()" class="example back back-button">Go Back</button>
 </div>

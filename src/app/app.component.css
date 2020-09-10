@@ -12,7 +12,37 @@
 }
 
 .center {
+  background-color: #55D6BE;
+  min-height: 400px;
   display: flex;
   justify-content: center;
   width: 70%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
+
+footer {
+  background-color: gray;
+  width: 100%;
+  padding: 10px 0px;
+  margin-top: 30px;
+}
+
+footer > ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+footer > ul > li > a {
+  text-decoration: none;
+  padding-left: 10px;
+  color: white;
+}
+
+footer > ul > li {
+  font-size: 2rem;
+}
+
+

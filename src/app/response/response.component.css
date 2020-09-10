@@ -5,7 +5,11 @@
 }
 
 .container {
-  width: 400px;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column wrap;
+  padding: 20px;
 }
 
 
@@ -16,6 +20,7 @@ ul {
   flex-flow: column wrap;
   width: 100%;
   list-style-type: none;
+  margin-top: 20px;
 }
 
 button {
@@ -30,4 +35,6 @@ ul > li {
 
 ul > li > a {
   text-decoration: none;
+  color: white;
+  font-size: 2rem;
 }
