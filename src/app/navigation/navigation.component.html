@@ -1,5 +1,5 @@
 <header>
-  <nav>
+  <nav> 
     <ul>
       <li><span class="title-text">Top Movie Categories:</span></li>
       <li><a [routerLink] = "['c1', 'top-rated']">Top Rated</a></li>
@@ -7,15 +7,13 @@
       <li><a [routerLink] = "['c3', 'upcoming']">Upcoming</a></li>
     </ul>
   </nav>
-  <section>
-    <h1>Welcome!</h1>
-    <h2><span class="title-text search">Select what you will be searching for:</span></h2>
-    <div>
-      <ul>
-        <li><a routerLink="">Movies</a></li>
-        <li><span class="slash">/</span></li>
-        <li><a routerLink="actor">Actors</a></li>
-      </ul>
-    </div>
-  </section>
 </header>
+<div class="search-selector-container">
+  <div class="search-selector">
+    <ul class="search-text">
+      <li><a routerLink="">Movies</a></li>
+      <li><span class="slash">/</span></li>
+      <li><a routerLink="actor">Actors</a></li>
+    </ul>
+  </div>
+</div>

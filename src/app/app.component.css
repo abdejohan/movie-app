@@ -5,14 +5,13 @@
 }
 
 .margin {
+  min-height: 600px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
 }
 
 .center {
-  background-color: #55D6BE;
+  background-color: #a3a3a3;
   min-height: 400px;
   display: flex;
   justify-content: center;
@@ -45,11 +44,8 @@ footer > ul > li {
   font-size: 2rem;
 }
 
-
-
 @media (max-width: 600px) {
   .center {
     width: 100%;
   }
 }
-

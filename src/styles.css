@@ -6,20 +6,24 @@
   margin: 0px;
 }
 
+html,
 body {
-  width: 100%;
+  min-height: 100vh;
 }
 
+body {
+  width: 100%;
+  background-image: url("./assets/images/headerImage1.jpg");
+}
 
 .back-button {
   width: 80%;
   height: 40px;
-  background-color: #7D5BA6;
+  background-color: #7d5ba6;
 }
 
-
 /* Style the search field */
-form.example input[type=text] {
+form.example input[type="text"] {
   padding: 10px;
   font-size: 17px;
   border: 1px solid grey;
@@ -33,7 +37,7 @@ form.example button {
   float: left;
   width: 30%;
   padding: 10px;
-  background: #7D5BA6;
+  background: #7d5ba6;
   color: white;
   font-size: 17px;
   border: 1px solid grey;
