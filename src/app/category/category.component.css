@@ -4,29 +4,27 @@
   margin: 0px;
 }
 
-div {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-flow: column wrap;
-  
-}
-
-
 ul {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-flow: column wrap;
   list-style-type: none;
-  
 }
 
 ul > li {
   padding: 2px 0px;
 }
 
-
 ul > li > a {
   text-decoration: none;
+  color: #feffea;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.category-title {
+  color: #fcfc62;
+  margin-bottom: 20px;
+  font-weight: 300;
 }
