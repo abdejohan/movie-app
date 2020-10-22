@@ -3,11 +3,11 @@ import { BackendService } from '../backend.service';
 import { MessageService } from '../message.service';
 
 @Component({
-  selector: 'app-frontpage',
-  templateUrl: './frontpage.component.html',
-  styleUrls: ['./frontpage.component.css']
+  selector: 'app-search-form',
+  templateUrl: './search-form.component.html',
+  styleUrls: ['./search-form.component.css']
 })
-export class FrontpageComponent implements OnInit {
+export class SearchFormComponent implements OnInit {
    movie: any;
    searchInput: any;
 
@@ -28,9 +28,6 @@ export class FrontpageComponent implements OnInit {
       this.messageService.add('Oh no, seems like there was an issue with the input. please try again');
     }
   }
-
-
-
 
 
     // GETS TOP RATED MOVIES FROM API
