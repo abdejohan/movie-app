@@ -24,7 +24,7 @@ body {
 }
 
 /* Style the search field */
-form.example input[type="text"] {
+form.form input[type="text"] {
   padding: 10px;
   font-size: 17px;
   border: 1px solid grey;
@@ -34,7 +34,7 @@ form.example input[type="text"] {
 }
 
 /* Style the submit button */
-form.example button {
+form.form button {
   float: left;
   width: 30%;
   padding: 10px;
@@ -46,15 +46,19 @@ form.example button {
   cursor: pointer;
 }
 
-form.example button:hover {
+form.form button:hover {
   background: #0b7dda;
 }
 
 /* Clear floats */
-form.example::after {
+form.form::after {
   content: "";
   clear: both;
   display: table;
+}
+
+form.form {
+  width: 100%;
 }
 
 /* BOX SHADOWS */

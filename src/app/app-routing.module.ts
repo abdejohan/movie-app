@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CategoryComponent } from './category/category.component';
-import { FrontpageComponent } from './frontpage/frontpage.component';
 import { ActorComponent } from './actor/actor.component';
 import { DisplayComponent } from './display/display.component';
 import { ResponseComponent } from './response/response.component';
 
 
 const routes: Routes = [
-  { path: '', component: FrontpageComponent },
+  { path: '', component: CategoryComponent },
   { path: 'actor', component: ActorComponent },
   { path: 'c1/:category', component: CategoryComponent },
   { path: 'c2/:category', component: CategoryComponent },

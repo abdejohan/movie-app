@@ -26,17 +26,16 @@ export class CategoryComponent implements OnInit {
 
   fetchApiData() {
     this.route.params.subscribe(params => { this.path = params.category; });
-    console.log(this.path);
     if (this.path === 'top-rated') {
       this.path = "Top 20 Highest Rated Movies:";
       this.backendservice.getTopRated().subscribe(res => this.movieCategory = res);
     } else if (this.path === 'upcoming') {
       this.path = "Top 20 Upcoming Movies:";
       this.backendservice.getUpcoming().subscribe(res => this.movieCategory = res);
-    } else if (this.path === 'popular') {
+    } else if (this.path === 'popular' || !this.path) {
       this.path = "Top 20 Most Popular Movies:";
       this.backendservice.getPopular().subscribe(res => this.movieCategory = res);
-    }
+    } 
   }
 
 
