@@ -1,34 +1,42 @@
-<div class="container">
-  
-  <span class="main-title title">{{ movie.original_title }}</span>
-  <div class="searchContent">
-    <div class="top-row">
-      <div class="content-container" *ngIf="movie">
-        <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="movie_poster">
-      </div>
-
-      <div class="movie-data-container">
-        <span class="title">Actors</span>
-        <p *ngFor="let res of actors"> {{ res.name }} </p>
-    
-        <span class="title">Genre</span>
-        <p *ngFor="let res of movie.genres"> {{ res.name }} </p>
+<section>
+  <div class="center-content" *ngIf="movie">
+    <span class="header-text movie-title">{{ movie.original_title }}</span>
+    <div class="container">
+      <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="movie_poster">
+      <div class="data-container">
+        <span class="header-text">Actors</span>
+        <div class="list">
+          <p *ngFor="let res of actors"> {{ res.name }} </p>
+        </div>
         
-        <span class="title">Overview</span>
-        <p>{{ movie.overview }}</p>
-      </div>
-    </div>
-    
-    <div class="searchContent">
-      <div class="content-container" *ngIf="person">
-        <span class="main-title title">{{ person.name }} </span>
-        <img src="https://image.tmdb.org/t/p/w300{{person.profile_path}}" alt="actor_poster">
-        ><span class="title">Biography</span>
-        <p> {{ person.biography }} </p>
-        <span class="title">Born In</span>
-        <p> {{ person.place_of_birth }} </p>
+        <span class="header-text">Genre</span>
+        <div class="list">
+          <p *ngFor="let res of movie.genres"> {{ res.name }} </p>
+        </div>
+        
+        <span class="header-text">Overview</span>
+        <p class="overview">{{ movie.overview }}</p>
       </div>
     </div>
   </div>
-  <button (click)="goBack()" class="example back back-button">Go Back</button>
-</div>
+    
+  <div *ngIf="actor">
+    <span class="header-text movie-title">{{ actor.name }} </span>
+    <div class="container">
+      <img src="https://image.tmdb.org/t/p/w300{{actor.profile_path}}" alt="actor_poster">
+      <div class="data-container">
+        <span class="header-text">Biography</span>
+        <div class="list">
+          <p> {{ actor.biography }} </p>
+        </div>
+        <span class="header-text">Born In</span>
+        <div class="list">
+          <p> {{ actor.place_of_birth }} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button-container">
+    <button (click)="goBack()" class="example back back-button">Go Back</button>
+  </div>
+</section>

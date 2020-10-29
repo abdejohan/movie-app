@@ -17,7 +17,7 @@ export class BackendService {
 
   constructor(private httpclient: HttpClient, private messageService: MessageService) { }
   cast: Cast;
-  person: any;
+  actor: any;
 
   apiLink = 'https://api.themoviedb.org/3/';
   apiKey = 'api_key=9c8b1e24fdb5fd66ee5afc26bb9da380';

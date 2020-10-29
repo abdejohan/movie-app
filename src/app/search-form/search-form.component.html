@@ -1,14 +1,23 @@
 <div>
-  <h2>MOVIES ARCHIVE</h2>
-  <p>
-    <span>Welcome!</span>
-    Here you can search for all of your favorite movies..
-    Enjoy!
-  </p>
+ 
   <!-- The Search form -->
-  <form class="form" action="">
-    <input name="search" [(ngModel)]="searchInput" type="text" placeholder="Search Movie.." required>
-    <button [routerLink]="['/movie', searchInput]" type="button">SEARCH</button>
+  <form class="form">
+    <input aria-label="Search movie" 
+    name="search" 
+    [(ngModel)]="searchInput" 
+    type="text" 
+    placeholder="Search for movie or actor.." 
+    required={true}
+    >
+    <button class="button" type="submit" name="submit" [routerLink]="['/', radioInput, searchInput]">Search</button>
+    <mat-radio-group name="radioButton" 
+    [(ngModel)]="radioInput" 
+    class="radio-group" 
+    aria-label="Select an option"
+    >
+      <mat-radio-button value="movie">Movie</mat-radio-button>
+      <mat-radio-button value="actor">Actor</mat-radio-button>
+    </mat-radio-group>
   </form>
       
 </div>

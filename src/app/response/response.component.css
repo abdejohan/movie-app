@@ -4,15 +4,6 @@
   padding: 0px;
 }
 
-.container {
-  width: 600px;
-  display: flex;
-  justify-content: space-between;
-  flex-flow: column wrap;
-  padding: 20px;
-}
-
-
 ul {
   display: flex;
   justify-content: space-around;
@@ -27,14 +18,27 @@ button {
   width: 100%;
 }
 
-
 ul > li {
   padding: 2px 0px;
 }
-
 
 ul > li > a {
   text-decoration: none;
   color: white;
   font-size: 2rem;
+}
+
+.responseContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchContent {
+}
+
+.item-container {
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
 }

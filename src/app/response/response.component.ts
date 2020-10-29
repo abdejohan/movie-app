@@ -15,22 +15,27 @@ export class ResponseComponent implements OnInit {
   public path: any;
   public person: any;
   public movie: any;
+  public searchInput: any;
+  public radioInput: any;
 
 
   constructor(
     private backendservice: BackendService,
     private messageservice: MessageService,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private router: Router,
 
   ) { }
-
+  
   ngOnInit(): void {
     this.route.params.subscribe(params => { this.path = params; });
-    if (this.path.movie) {
-      this.searchMovie(this.path.movie);
-    } else if (this.path.actor) {
-      this.searchActor(this.path.actor);
+    if (this.router.url.includes("movie")) {
+      console.log(this.path.searchInput);   
+      this.searchMovie(this.path.searchInput);
+    } else if (this.router.url.includes("actor")) {
+      console.log(this.path.searchInput);   
+      this.searchActor(this.path.searchInput);
     }
   }
 
@@ -38,6 +43,8 @@ export class ResponseComponent implements OnInit {
 
   searchMovie(searchInput: string) {
     if (searchInput) {
+      console.log(searchInput);
+      console.log("searchInput");
       searchInput = searchInput.replace(' ', '+');
       this.backendservice.searchMovie(searchInput).subscribe(data => this.movie = data);
     } else {

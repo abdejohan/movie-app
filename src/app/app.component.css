@@ -4,29 +4,6 @@
   margin: 0px;
 }
 
-.margin {
-  min-height: 600px;
-  display: flex;
-  justify-content: center;
-}
-
-.center {
-  padding: 10px;
-  min-height: 400px;
-  display: flex;
-  width: 80%;
-  background-color: rgba(163, 163, 163, 0.81);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
-.wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 50px;
-  background-color: rgba(66, 66, 66, 0.8);
-  width: 100%;
-}
-
 footer {
   background-color: rgba(163, 163, 163, 0.2);
   width: 100%;

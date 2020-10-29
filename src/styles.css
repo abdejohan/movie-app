@@ -14,51 +14,12 @@ body {
 
 body {
   width: 100%;
-  background-image: url("./assets/images/bgImage.jpg");
 }
 
 .back-button {
   width: 80%;
   height: 40px;
   background-color: #7d5ba6;
-}
-
-/* Style the search field */
-form.form input[type="text"] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 70%;
-  background: #f1f1f1;
-}
-
-/* Style the submit button */
-form.form button {
-  float: left;
-  width: 30%;
-  padding: 10px;
-  background: #7d5ba6;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
-}
-
-form.form button:hover {
-  background: #0b7dda;
-}
-
-/* Clear floats */
-form.form::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-form.form {
-  width: 100%;
 }
 
 /* BOX SHADOWS */
@@ -96,4 +57,22 @@ form.form {
 }
 .shadow-none {
   box-shadow: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
