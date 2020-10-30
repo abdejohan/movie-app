@@ -6,6 +6,8 @@ form.form input[type="text"] {
   float: left;
   width: 60%;
   background: #f1f1f1;
+
+  border-radius: 30px 0px 0px 30px;
 }
 
 /* Style the submit button */
@@ -18,6 +20,12 @@ form.form .button {
   border: 1px solid grey;
   border-left: none; /* Prevent double borders */
   cursor: pointer;
+
+  border-radius: 0px 30px 30px 0px;
+}
+
+input:focus {
+  outline: none;
 }
 
 form.form .button:hover {
@@ -35,16 +43,8 @@ form.form {
   width: 60%;
 }
 
-select {
-  border: 1px solid grey;
-  width: 10%;
-  padding: 10px;
-  font-size: 17px;
-  border-left: none; /* Prevent double borders */
-  border-right: none; /* Prevent double borders */
-}
-
 div {
+  margin-top: 40px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -52,5 +52,11 @@ div {
 }
 
 .radio-group {
+  margin-left: 20px;
+  margin-top: 5px;
   display: block;
+}
+
+.radio-button + .radio-button {
+  margin-left: 10px;
 }
