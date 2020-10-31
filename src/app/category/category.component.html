@@ -1,8 +1,6 @@
-  <div>
-    <h2 class="category-title">{{ path }}</h2>
-    <ul *ngIf="movieCategory">
-      <li *ngFor="let data of movieCategory.results">
-        <a routerLink="/movie/id/{{data.id}}">{{ data.title }}</a>
-      </li>
-    </ul>
-  </div>
+  <h2 class="category-title">{{ path }}</h2>
+  <ul *ngIf="movieCategory">
+    <li *ngFor="let data of movieCategory.results">
+      <a routerLink="/movie/id/{{data.id}}">{{ data.title }}</a>
+    </li>
+  </ul>

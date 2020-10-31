@@ -4,7 +4,17 @@
   margin: 0px;
 }
 
+:host {
+  width: 100%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
 ul {
+  width: 65%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -13,13 +23,27 @@ ul {
 }
 
 ul > li {
-  padding: 2px 0px;
+  width: 100%;
+  border: 1px solid #c9c9c9;
+  margin-bottom: 20px;
 }
 
-ul > li > a {
+li:nth-child(odd) {
+  background: #a3a3a3;
+}
+
+li:nth-child(even) {
+  background: lightgrey;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  padding: 35px 20px;
+
   text-decoration: none;
-  color: #feffea;
   font-weight: 400;
+  color: black;
   font-size: 1.2rem;
 }
 
@@ -27,4 +51,10 @@ ul > li > a {
   color: #fcfc62;
   margin-bottom: 20px;
   font-weight: 300;
+}
+
+@media (max-width: 600px) {
+  ul {
+    width: 100%;
+  }
 }

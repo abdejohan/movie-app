@@ -4,6 +4,13 @@
   margin: 0px;
 }
 
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
 footer {
   background-color: rgba(163, 163, 163, 0.2);
   width: 100%;
