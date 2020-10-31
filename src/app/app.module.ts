@@ -4,7 +4,6 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ActorComponent } from './actor/actor.component';
 import { CategoryComponent } from './category/category.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -19,7 +18,6 @@ import { MatRadioModule } from '@angular/material/radio';
 @NgModule({
   declarations: [
     AppComponent,
-    ActorComponent,
     CategoryComponent,
     NavigationComponent,
     DisplayComponent,

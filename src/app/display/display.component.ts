@@ -36,13 +36,14 @@ export class DisplayComponent implements OnInit {
 
   searchMovieId(id) {
     const objKey = 'cast';
+    console.log("movie_id: " + id);
     this.backendservice.searchMovieId(id).subscribe(details => this.movie = details);
     this.backendservice.searchCast(id).subscribe(details => this.actors = details[objKey].slice(0, 6));
   }
 
 
   searchActorId(id) {
-    console.log('came this far');
+    console.log("actor_id: " + id);
     this.backendservice.searchActorId(id).subscribe(details => this.actor = details);
   }
 
