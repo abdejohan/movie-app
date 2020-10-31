@@ -7,9 +7,9 @@
     [(ngModel)]="searchInput" 
     type="text" 
     placeholder="Search for movie or actor.." 
-    required={true}
+    required
     >
-    <button class="button" type="submit" name="submit" [routerLink]="['/', radioInput, searchInput]">Search</button>
+    <input class="button" type="submit" name="submit" [routerLink]="['/', radioInput, searchInput]">
     <mat-radio-group name="radioButton" 
     [(ngModel)]="radioInput" 
     class="radio-group" 
