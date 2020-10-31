@@ -11,6 +11,7 @@ header {
   background-image: url("../../assets/images/headertest.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .header-text {
@@ -20,77 +21,42 @@ header {
   left: 40px;
 }
 
-.icon-menu {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  height: 50px;
-  width: 50px;
-}
-
 nav {
+  margin-top: 20px;
   width: 100%;
-  padding-left: 20px;
-  justify-content: center;
-  flex-flow: row nowrap;
   display: flex;
-  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   font-size: large;
 }
 
-nav > ul > li > a {
+a {
   color: #424242;
+  text-decoration: none;
 }
 
-nav > ul > li > a:hover {
+a:hover {
   color: #a6d3a0;
-}
-
-.category-link + .category-link {
-  padding-left: 20px;
-  border-left: 2px solid gray;
-  margin-left: 20px;
 }
 
 ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   list-style-type: none;
   padding: 10px;
 }
 
-ul > li {
-  margin-left: 0.5em;
+li {
+  padding: 5px 1px;
 }
 
-a {
-  text-decoration: none;
-}
-
-ul > li > a:hover {
-  color: #a6d3a0;
-}
-
-.nav-list {
-  widows: 100%;
-  flex-grow: 1;
-  top: 0px;
-  max-width: 1000px;
-}
-
-.title-text {
-  padding: 20px;
-  color: #fcfc62;
-  display: block;
-  font-weight: bolder;
-  width: 100%;
-  letter-spacing: 1px;
-}
-
-.title-link {
-  font-size: 1.5em;
+li + li {
+  padding-left: 20px;
+  border-left: 2px solid gray;
+  margin-left: 20px;
 }
 
 h1 {
@@ -98,19 +64,11 @@ h1 {
   color: white;
 }
 
-.search {
-  font-size: x-large;
-  color: whitesmoke;
-}
-
-@media (max-width: 600px) {
-  section {
-    width: 100%;
-  }
-
-  .title-text {
-    display: none;
-  }
+.title-text {
+  padding: 20px;
+  color: #ffd740;
+  font-weight: bolder;
+  letter-spacing: 1px;
 }
 
 .darken {
@@ -131,4 +89,20 @@ h1 {
 .icon {
   width: 40px;
   height: 40px;
+}
+
+@media (max-width: 600px) {
+  section {
+    width: 100%;
+  }
+
+  .title-text {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .icon {
+    display: none;
+  }
 }

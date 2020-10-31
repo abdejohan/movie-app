@@ -2,13 +2,13 @@
 
 <div class="responseContainer">
   <ul *ngIf="movie">
-    <li class="item-container" *ngFor="let data of movie.results">
+    <li *ngFor="let data of movie.results">
       <a routerLink="/movie/id/{{data.id}}">{{ data.title }}</a>
     </li>
   </ul>
 
   <ul *ngIf="person">
-    <li class="item-container" *ngFor="let data of person.results">
+    <li *ngFor="let data of person.results">
       <a routerLink="/actor/id/{{data.id}}">{{ data.name }}</a>
     </li>
   </ul>

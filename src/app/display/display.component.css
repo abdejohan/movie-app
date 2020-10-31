@@ -4,7 +4,7 @@
   padding: 0px;
 }
 
-section {
+:host {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,7 +57,10 @@ p + p {
 }
 
 .center-content {
+  display: flex;
+  flex-flow: column nowrap;
   width: 80%;
+  background-color: #c9c9c9;
 }
 
 .content-container {
@@ -75,7 +78,6 @@ p + p {
 .container {
   display: flex;
   align-items: center;
-  background-color: #c9c9c9;
 }
 
 .list {
