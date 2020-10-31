@@ -5,7 +5,7 @@
 }
 
 :host {
-  margin-top: 50px;
+  margin-top: 40px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -18,7 +18,6 @@ ul {
   flex-flow: column wrap;
   width: 100%;
   list-style-type: none;
-  margin-top: 20px;
 }
 
 li {
@@ -66,5 +65,9 @@ button {
 
   li {
     border-radius: 0px;
+  }
+
+  :host {
+    margin-top: 40px;
   }
 }
