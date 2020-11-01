@@ -91,18 +91,19 @@ h1 {
   height: 40px;
 }
 
+.logo-text-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 600px) {
   section {
     width: 100%;
   }
 
-  .title-text {
-    display: none;
-  }
-}
-
-@media (max-width: 400px) {
-  .icon {
-    display: none;
+  nav {
+    flex-flow: column nowrap;
   }
 }
