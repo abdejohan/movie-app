@@ -12,7 +12,7 @@
 }
 
 div {
-  width: 65%;
+  width: 55%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -58,7 +58,7 @@ a {
 .category-title {
   color: #ffd740;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   margin-bottom: 20px;
 }

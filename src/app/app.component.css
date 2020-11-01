@@ -12,7 +12,7 @@ section {
 }
 
 footer {
-  background-color: rgba(163, 163, 163, 0.2);
+  background-color: rgba(66, 66, 66, 0.5);
   width: 100%;
   padding: 30px 0px;
   margin-top: 30px;
@@ -33,12 +33,16 @@ footer > ul > li > a {
   color: white;
 }
 
+footer > ul > li > a:hover {
+  color: #424242;
+}
+
 footer > ul > li {
   font-size: 1.2rem;
 }
 
 .list-header {
-  color: #fcfc62;
+  color: #ffd740;
 }
 
 @media (max-width: 600px) {
@@ -47,7 +51,9 @@ footer > ul > li {
   }
 
   footer > ul {
-    align-items: center;
+    margin-left: 40px;
+    align-items: flex-start;
+    margin-bottom: 20px;
   }
 
   section {
