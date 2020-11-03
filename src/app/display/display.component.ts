@@ -12,8 +12,8 @@ import { Location } from '@angular/common';
 })
 export class DisplayComponent implements OnInit {
   movie: any;
+  actor: any;
   actors: any;
-  person: any;
 
   constructor(
     private backendservice: BackendService,
@@ -24,11 +24,9 @@ export class DisplayComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    if (!this.route.toString().includes('person')) {
+    if (!this.route.toString().includes('actor')) {
       this.searchMovieId(id);
-      console.log('movie');
     } else {
-      console.log('actor');
       this.searchActorId(id);
     }
   }
@@ -42,8 +40,7 @@ export class DisplayComponent implements OnInit {
 
 
   searchActorId(id) {
-    console.log('came this far');
-    this.backendservice.searchActorId(id).subscribe(details => this.person = details);
+    this.backendservice.searchActorId(id).subscribe(details => this.actor = details);
   }
 
 

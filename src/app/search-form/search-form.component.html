@@ -1,0 +1,23 @@
+<div>
+ 
+  <!-- The Search form -->
+  <form class="form">
+    <input aria-label="Search movie" 
+    name="search" 
+    [(ngModel)]="searchInput" 
+    type="text" 
+    placeholder="Search for movie or actor.." 
+    required
+    >
+    <input class="button" type="submit" name="submit" [routerLink]="['/', radioInput, searchInput]">
+    <mat-radio-group name="radioButton" 
+    [(ngModel)]="radioInput" 
+    class="radio-group" 
+    aria-label="Select an option"
+    >
+      <mat-radio-button class="radio-button" value="movie">Movie</mat-radio-button>
+      <mat-radio-button class="radio-button" value="actor">Actor</mat-radio-button>
+    </mat-radio-group>
+  </form>
+      
+</div>

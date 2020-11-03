@@ -1,13 +1,17 @@
-<nav>
-  <h2 class="mini-header">Im looking for a:</h2>
-  <ul class="nav-list">
-    <li class="red movie-actor-option"><a routerLink="" class="title-link">Movies</a></li>
-    <li class="blue movie-actor-option"><a routerLink="actor" class="title-link">Actors</a></li>
-  </ul>
-  <ul class="container-div">
-    <li><span class="title-text">Top Movie Categories:</span></li>
-    <li><a [routerLink] = "['c1', 'top-rated']">Top Rated</a></li>
-    <li><a [routerLink] = "['c2', 'popular']">Popular</a></li>
-    <li><a [routerLink] = "['c3', 'upcoming']">Upcoming</a></li>
-  </ul>
-</nav>
+<header>
+  <div class="img darken"></div>
+  <article class="header-text">
+    <span class="fix">MOVIE DATABASE</span>
+  </article>
+</header>
+    <nav> 
+      <div class="logo-text-container">
+        <img class="icon" src="../../assets/images/multimedia.png" alt="film icon">
+        <span class="title-text">Top Movie Categories:</span>
+      </div>
+      <ul>
+        <li class="category-link"><a [routerLink] = "['c1', 'top-rated']">Top Rated</a></li>
+        <li class="category-link"><a [routerLink] = "['c2', 'popular']">Popular</a></li>
+        <li class="category-link"><a [routerLink] = "['c3', 'upcoming']">Upcoming</a></li>
+      </ul>
+    </nav>
