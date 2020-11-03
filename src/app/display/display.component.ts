@@ -26,9 +26,7 @@ export class DisplayComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     if (!this.route.toString().includes('actor')) {
       this.searchMovieId(id);
-      console.log('movie');
     } else {
-      console.log('actor');
       this.searchActorId(id);
     }
   }
@@ -36,14 +34,12 @@ export class DisplayComponent implements OnInit {
 
   searchMovieId(id) {
     const objKey = 'cast';
-    console.log("movie_id: " + id);
     this.backendservice.searchMovieId(id).subscribe(details => this.movie = details);
     this.backendservice.searchCast(id).subscribe(details => this.actors = details[objKey].slice(0, 6));
   }
 
 
   searchActorId(id) {
-    console.log("actor_id: " + id);
     this.backendservice.searchActorId(id).subscribe(details => this.actor = details);
   }
 

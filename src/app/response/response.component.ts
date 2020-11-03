@@ -31,10 +31,8 @@ export class ResponseComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => { this.path = params; });
     if (this.router.url.includes("movie")) {
-      console.log(this.path.searchInput);   
       this.searchMovie(this.path.searchInput);
     } else if (this.router.url.includes("actor")) {
-      console.log(this.path.searchInput);   
       this.searchActor(this.path.searchInput);
     }
   }
@@ -43,8 +41,6 @@ export class ResponseComponent implements OnInit {
 
   searchMovie(searchInput: string) {
     if (searchInput) {
-      console.log(searchInput);
-      console.log("searchInput");
       searchInput = searchInput.replace(' ', '+');
       this.backendservice.searchMovie(searchInput).subscribe(data => this.movie = data);
     } else {
