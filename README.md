@@ -18,7 +18,7 @@ npm install
 
 ### Start
 
-Start project by with:
+Start project with:
 
 ```
 ng serve --open
