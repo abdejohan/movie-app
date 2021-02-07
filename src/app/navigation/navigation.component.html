@@ -4,14 +4,24 @@
     <span class="fix">MOVIE DATABASE</span>
   </article>
 </header>
-    <nav> 
-      <div class="logo-text-container">
-        <img class="icon" src="../../assets/images/multimedia.png" alt="film icon">
-        <span class="title-text">Top Movie Categories:</span>
-      </div>
-      <ul>
-        <li class="category-link"><a [routerLink] = "['c1', 'top-rated']">Top Rated</a></li>
-        <li class="category-link"><a [routerLink] = "['c2', 'popular']">Popular</a></li>
-        <li class="category-link"><a [routerLink] = "['c3', 'upcoming']">Upcoming</a></li>
-      </ul>
-    </nav>
+<nav class="category-container">
+  <div class="logo-text-container">
+    <img
+      class="icon"
+      src="../../assets/images/multimedia.png"
+      alt="film icon"
+    />
+    <span class="title-text">Top Categories</span>
+  </div>
+  <ul>
+    <li class="category-link">
+      <a [routerLink]="['c1', 'top-rated']">Top Rated</a>
+    </li>
+    <li class="category-link">
+      <a [routerLink]="['c2', 'popular']">Popular</a>
+    </li>
+    <li class="category-link">
+      <a [routerLink]="['c3', 'upcoming']">Upcoming</a>
+    </li>
+  </ul>
+</nav>
