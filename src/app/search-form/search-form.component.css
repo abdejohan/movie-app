@@ -21,6 +21,12 @@ form.form .button {
   border-radius: 0px 30px 30px 0px;
 }
 
+.button {
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
 input:focus {
   outline: none;
 }
